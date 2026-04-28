@@ -41,6 +41,7 @@ void initializehunt() {
 void huntforappointments() {
   drawBackground();
   
+  
   for (int i = bichos.size() - 1; i >= 0; i--) {
     Bicho b = bichos.get(i);
 
