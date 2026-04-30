@@ -1,4 +1,7 @@
-// movement bicho
+// class to manage the movements of the characters (bugs or bichos)
+// The movements were copied from an example found that moved circles in a way 
+// that seemed like bugs flying. 
+
 float dt;        // time between frames in seconds
 int lastTime;    // to calculate dt
 
@@ -7,20 +10,19 @@ class Bicho {
   float x, y;
   float t1, t2;
   float r = 20;
-  color cbicho;
   PImage ibicho;
 
   boolean captured = false;
   boolean dead     = false;
 
-  float noiseSpeed = 1.2;   // speed for bug movement
+  float noiseSpeed = 0.2;   // speed for bug movement
+                            // 0.2 is very slow for easy catching. 1 is fast and difficult
 
   Bicho() {
     x = random(width);
     y = random(height);
     t1 = random(1000);
     t2 = random(2000);
-    cbicho = color(100, 200, 255);
     captured = false;
     dead = false;
   }
